@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PageStyles from './PageStyles';
+import StyleButton from './presentational/StyleButton';
 import './index.css';
+import PageStyles from './PageStyles';
 
 
 class MyPage extends React.Component {
@@ -11,13 +12,46 @@ class MyPage extends React.Component {
             //default page style is SIMPLE
             style: PageStyles.SIMPLE,
         }
+        this.handleStyleButtonClick = this.handleStyleButtonClick.bind(this);
     }
+
+    handleStyleButtonClick(style){
+        console.log(`handleStyleButtonClick: ${style} passed`)
+        this.setState({
+            style: style
+        });
+    }
+
     render(){
+        console.log(`State: style: ${this.state.style}`);
         return(
-            <div id={this.state.style + "-background"}>
-                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <line className="v-line" x1="50px" x2="50px" y1="0" y2="800px"/>
-                </svg>
+            <div id={this.state.style + "-background"}>            
+                <div className="page-container">
+                    <div className="page-options-buttons" id="options-top">
+                        <StyleButton 
+                            text="KEEP IT SIMPLE" 
+                            pageStyle={PageStyles.SIMPLE}
+                            click={this.handleStyleButtonClick}
+                        />
+                        <StyleButton 
+                            text="CLOUDY DAYS" 
+                            pageStyle={PageStyles.CLOUDY}
+                            click={this.handleStyleButtonClick}
+                        />
+                    </div>
+                    <div className="page-options-buttons" id="options-bottom">
+                        <StyleButton 
+                            text="ANIMATED" 
+                            pageStyle={PageStyles.ANIMATED}
+                            click={this.handleStyleButtonClick}
+                        />
+                        <StyleButton 
+                            text="UNDECIDED" 
+                            pageStyle={PageStyles.UNDECIDED}
+                            click={this.handleStyleButtonClick}
+                        />
+                    </div>
+                </div>
             </div>
         );
     }
