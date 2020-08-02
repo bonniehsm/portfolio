@@ -1,4 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 module.exports = {
   module: {
@@ -18,10 +20,11 @@ module.exports = {
           }
       },
       {
-				test: /\.css$/,
+				test: /\.s[ca]ss$/i,
 				use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
+
         ]
       },
       {
@@ -38,6 +41,10 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
+    }),
+    new MiniCssExtractPlugin({
+      filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+      chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
     })
   ]
 };
