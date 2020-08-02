@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import StyleButton from './presentational/StyleButton';
 import './index.css';
+/*import Cloudy from './assets/Cloudy_1080p.mp4';*/
 import PageStyles from './PageStyles';
 
 
@@ -25,7 +26,18 @@ class MyPage extends React.Component {
     render(){
         console.log(`State: style: ${this.state.style}`);
         return(
-            <div id={this.state.style + "-background"}>            
+            <div id={this.state.style + "-background"} className="background">     
+                { 
+                    /*
+                    this.state.style == PageStyles.CLOUDY 
+                        ? 
+                        <video id="video-cloudy" autoPlay muted loop>
+                            <source src={Cloudy} type="video/mp4"></source>
+                        </video>
+                        : 
+                        null
+                    */
+                }       
                 <div className="page-container">
                     <div className="page-options-buttons" id="options-top">
                         <StyleButton 
@@ -39,6 +51,26 @@ class MyPage extends React.Component {
                             click={this.handleStyleButtonClick}
                         />
                     </div>
+                    <main id="main-content">
+                        <div id="blurb">
+                            <p id="my-message">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Maecenas vitae libero a mi sodales fringilla. 
+                                Curabitur quis egestas lacus, nec venenatis ligula. 
+                                Mauris bibendum fringilla neque in aliquet. 
+                                Vestibulum eget massa egestas, volutpat nibh eu, vehicula nibh. 
+                                Nam elementum in leo at vulputate. 
+                                Pellentesque sagittis aliquet molestie.                                
+                            </p>
+                        </div>
+                        <div id="my-profile">
+                            { /*<img src={Profile} alt="Profile Image" className="my-profile-img"/>*/ }
+                        </div>
+                        <div id="more-info">
+                            { /* https://github.com/bonniehsm */ } 
+                            { /* https://www.linkedin.com/in/bonnie-hung/ --> */ }
+                        </div>
+                    </main>
                     <div className="page-options-buttons" id="options-bottom">
                         <StyleButton 
                             text="ANIMATED" 
@@ -51,6 +83,9 @@ class MyPage extends React.Component {
                             click={this.handleStyleButtonClick}
                         />
                     </div>
+                    <footer>
+                        <p id="credits">Free B-Roll by <a target="_blank" href="http://www.videezy.com">Videezy.com</a></p>
+                    </footer>
                 </div>
             </div>
         );

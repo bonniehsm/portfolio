@@ -14,7 +14,7 @@ module.exports = {
         test: /\.html$/,
         use:
           {
-            loader: "html-loader"
+            loader: "html-loader",
           }
       },
       {
@@ -23,6 +23,14 @@ module.exports = {
           {loader: 'style-loader'},
           {loader: 'css-loader'},
         ]
+      },
+      {
+        test: /\.mp4$/,
+        use: 'file-loader?name=videos/[name].[ext]',
+      },
+      {
+        test: /\.png|jpe?g|gif?/i,
+        use: 'file-loader',
       }
     ]
   },
