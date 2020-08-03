@@ -33,6 +33,7 @@ button {
 .page-container {
     height: 100%;
     padding: 30px;
+    padding-bottom: 0px;
     box-sizing: border-box;       
     display: flex;
     flex-flow: column nowrap;
@@ -42,6 +43,7 @@ button {
 
 #main-content {
     display: flex;
+    flex-direction: column;
     width: 80%;
     margin-top: auto;
     margin-left: auto;
@@ -52,7 +54,7 @@ button {
     margin-top: auto;
 }
 
-footer p#credits {
+footer p {
     margin: 0;
     text-align: center;
     font-family: arial;
@@ -87,6 +89,31 @@ footer p#credits {
 .my-profile-img {
     max-width: 200px;
 }
+
+
+
+/************
+*    MAIN   *
+************/
+
+#more-info {
+    button {
+        margin-right: 10px;
+        border-radius: 8px;        
+        box-shadow: -0.45px -0.45px 1px rgba(0,0,0,0.1), 3px 3px 2px rgba(0, 0, 0, 0.2), 6.5px 6.5px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.45s;
+    }
+
+    button:hover {
+        box-shadow: -0.25px -0.25px 0.7px rgba(0,0,0,0.1), 1.5px 1.5px 2px rgba(0, 0, 0, 0.2), 3px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes btn-animate {
+        100% { box-shadow: 0; }
+    }
+}
+
+
 
 
 /** Simple Background **/

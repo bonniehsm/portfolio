@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import StyleButton from './presentational/StyleButton';
 import './index.css';
 /*import Cloudy from './assets/Cloudy_1080p.mp4';*/
+import GithubIcon from './assets/github-50.png';
+import LinkedInIcon from './assets/linkedin-50.png';
 import PageStyles from './PageStyles';
 
 
@@ -67,8 +69,16 @@ class MyPage extends React.Component {
                             { /*<img src={Profile} alt="Profile Image" className="my-profile-img"/>*/ }
                         </div>
                         <div id="more-info">
-                            { /* https://github.com/bonniehsm */ } 
-                            { /* https://www.linkedin.com/in/bonnie-hung/ --> */ }
+                            <button>
+                                <a href="https://github.com/bonniehsm">
+                                    <img src={GithubIcon} alt="Github Icon"/>
+                                </a> 
+                            </button>
+                            <button>
+                                <a href="https://www.linkedin.com/in/bonnie-hung/">
+                                    <img src={LinkedInIcon} alt="LinkedIn Icon"/>
+                                </a>
+                            </button>
                         </div>
                     </main>
                     <div className="page-options-buttons" id="options-bottom">
@@ -85,6 +95,7 @@ class MyPage extends React.Component {
                     </div>
                     <footer>
                         <p id="credits">Free B-Roll by <a target="_blank" href="http://www.videezy.com">Videezy.com</a></p>
+                        <p><a target="_blank" href="https://icons8.com/icons/set/github">GitHub</a>, <a target="_blank" href="https://icons8.com/icons/set/linkedin">LinkedIn</a> and other icons by <a target="_blank" href="https://icons8.com">Icons8</a></p>
                     </footer>
                 </div>
             </div>
