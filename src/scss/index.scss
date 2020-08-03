@@ -1,13 +1,28 @@
+$ff-crimson: 'Crimson Text', serif;
+$ff-raleway: 'Raleway', sans-serif;
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+p {
+    font-family: $ff-crimson;
+    font-size: 1.3rem;
 }
 
 button {
     border: none;
     background: none;
+    cursor: pointer;
+    letter-spacing: 0.8px;
 }
+
+.btn-style-option {
+    font-family: $ff-raleway;
+    font-size: 1.8rem;
+}
+
 
 #root {
     height: 100vh;
@@ -17,15 +32,12 @@ button {
 
 .page-container {
     height: 100%;
+    padding: 30px;
+    box-sizing: border-box;       
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    position: relative;
-}
-
-/** TEMP STYLING - TO BE REMOVED**/
-.page-container > div {
-    border: 1px dashed black;
+    position: relative; 
 }
 
 #main-content {

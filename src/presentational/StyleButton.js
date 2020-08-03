@@ -2,7 +2,7 @@ import React from "react";
 
 function StyleButton(props) {
     return(
-        <button onClick={() => props.click(props.pageStyle)}>
+        <button className="btn-style-option" id={"btn-" + props.pageStyle} onClick={() => props.click(props.pageStyle)}>
             {props.text}
         </button>
     );
