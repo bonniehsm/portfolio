@@ -5,6 +5,7 @@ import './index.css';
 /*import Cloudy from './assets/Cloudy_1080p.mp4';*/
 import GithubIcon from './assets/github-50.png';
 import LinkedInIcon from './assets/linkedin-50.png';
+import Profile from './assets/Profile.JPG';
 import PageStyles from './PageStyles';
 
 
@@ -66,7 +67,9 @@ class MyPage extends React.Component {
                             </p>
                         </div>
                         <div id="my-profile">
-                            { /*<img src={Profile} alt="Profile Image" className="my-profile-img"/>*/ }
+                            <div id="my-profile-box">
+                                <img src={Profile} alt="Profile Image" className="my-profile-img"/>
+                            </div>
                         </div>
                         <div id="more-info">
                             <button>
