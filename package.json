@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open --mode development", 
+    "sass-watch": "sass --watch ./src/scss/index.scss ./src/index.css",
     "build": "webpack --mode production"
   },
   "dependencies": {

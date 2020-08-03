@@ -9,18 +9,18 @@ module.exports = {
         test: /\.js$/,    
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         },
       },
       {
         test: /\.html$/,
         use:
           {
-            loader: "html-loader",
+            loader: 'html-loader',
           }
       },
       {
-				test: /\.s[ca]ss$/i,
+				test: /\.css|s[ca]ss$/i,
 				use: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
