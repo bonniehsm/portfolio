@@ -22,9 +22,9 @@ module.exports = {
       {
 				test: /\.s[ca]ss$/i,
 				use: [
-          {loader: 'style-loader'},
-          {loader: 'css-loader'},
-
+          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
         ]
       },
       {
