@@ -43,7 +43,7 @@ button {
 
 #main-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     width: 80%;
     margin-top: auto;
     margin-left: auto;
@@ -97,15 +97,16 @@ footer p {
 ************/
 
 #my-profile {
-    transform: scaleY(1.35);
-
+    min-width: 250px;
+    position: relative;
     #my-profile-box {
         position: relative;
         overflow: hidden;
         height: 155px;
         width: 155px;
         border: 1.6px solid black;
-        transform: rotate(45deg);
+        transform: scaleY(1.35) rotate(45deg);
+        margin: auto;
         .my-profile-img {
             width: 175px;
             transform: rotate(-45deg) scaleX(1.3) translate(17px, -27px)

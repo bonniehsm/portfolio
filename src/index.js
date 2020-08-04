@@ -55,33 +55,35 @@ class MyPage extends React.Component {
                         />
                     </div>
                     <main id="main-content">
-                        <div id="blurb">
-                            <p id="my-message">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Maecenas vitae libero a mi sodales fringilla. 
-                                Curabitur quis egestas lacus, nec venenatis ligula. 
-                                Mauris bibendum fringilla neque in aliquet. 
-                                Vestibulum eget massa egestas, volutpat nibh eu, vehicula nibh. 
-                                Nam elementum in leo at vulputate. 
-                                Pellentesque sagittis aliquet molestie.                                
-                            </p>
-                        </div>
                         <div id="my-profile">
                             <div id="my-profile-box">
                                 <img src={Profile} alt="Profile Image" className="my-profile-img"/>
                             </div>
                         </div>
-                        <div id="more-info">
-                            <button>
-                                <a href="https://github.com/bonniehsm">
-                                    <img src={GithubIcon} alt="Github Icon"/>
-                                </a> 
-                            </button>
-                            <button>
-                                <a href="https://www.linkedin.com/in/bonnie-hung/">
-                                    <img src={LinkedInIcon} alt="LinkedIn Icon"/>
-                                </a>
-                            </button>
+                        <div id="content-details">
+                            <div id="blurb">
+                                <p id="my-message">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Maecenas vitae libero a mi sodales fringilla. 
+                                    Curabitur quis egestas lacus, nec venenatis ligula. 
+                                    Mauris bibendum fringilla neque in aliquet. 
+                                    Vestibulum eget massa egestas, volutpat nibh eu, vehicula nibh. 
+                                    Nam elementum in leo at vulputate. 
+                                    Pellentesque sagittis aliquet molestie.                                
+                                </p>
+                            </div>
+                            <div id="more-info">
+                                <button>
+                                    <a href="https://github.com/bonniehsm">
+                                        <img src={GithubIcon} alt="Github Icon"/>
+                                    </a> 
+                                </button>
+                                <button>
+                                    <a href="https://www.linkedin.com/in/bonnie-hung/">
+                                        <img src={LinkedInIcon} alt="LinkedIn Icon"/>
+                                    </a>
+                                </button>
+                            </div>
                         </div>
                     </main>
                     <div className="page-options-buttons" id="options-bottom">
