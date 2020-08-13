@@ -7,7 +7,7 @@ import GithubIcon from './assets/github-50.png';
 import LinkedInIcon from './assets/linkedin-50.png';
 import Profile from './assets/Profile.JPG';
 import PageStyles from './PageStyles';
-
+import ImageButton from './common/ImageButton';
 
 class MyPage extends React.Component {
     constructor(props){
@@ -73,16 +73,16 @@ class MyPage extends React.Component {
                                 </p>
                             </div>
                             <div id="more-info">
-                                <button>
-                                    <a href="https://github.com/bonniehsm">
-                                        <img src={GithubIcon} alt="Github Icon"/>
-                                    </a> 
-                                </button>
-                                <button>
-                                    <a href="https://www.linkedin.com/in/bonnie-hung/">
-                                        <img src={LinkedInIcon} alt="LinkedIn Icon"/>
-                                    </a>
-                                </button>
+                                <ImageButton 
+                                    link="https://github.com/bonniehsm"
+                                    image={GithubIcon}
+                                    alt="Github Icon"
+                                />
+                                <ImageButton
+                                    link="https://www.linkedin.com/in/bonnie-hung/"
+                                    image={LinkedInIcon}
+                                    alt="LinkedIn Icon"
+                                />
                             </div>
                         </div>
                     </main>
